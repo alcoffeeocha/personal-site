@@ -1,0 +1,21 @@
+{
+  "name": "personal-site",
+  "version": "1.0.0",
+  "author": "alcoffeeocha <alkahfikhuzaimy@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "yarn clean && parcel src/*.html",
+    "build": "yarn clean && parcel build src/*.html",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.6.0",
+    "parcel": "^2.6.0",
+    "rimraf": "^3.0.2"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 0.5%",
+    "IE >= 11"
+  ]
+}
