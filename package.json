@@ -4,7 +4,7 @@
   "author": "alcoffeeocha <alkahfikhuzaimy@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "yarn clean && parcel src/*.html",
+    "dev": "yarn clean && parcel src/*.html --port 3000",
     "build": "yarn clean && parcel build src/*.html",
     "clean": "rimraf dist"
   },
@@ -20,7 +20,8 @@
   },
   "browserslist": [
     "last 2 versions",
-    "> 0.5%",
+    "> .2%",
     "IE >= 11"
-  ]
+  ],
+  "dependencies": {}
 }
