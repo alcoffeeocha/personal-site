@@ -1,0 +1,72 @@
+@use "mixins" as *;
+h2,
+h3 {
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 4.4rem;
+  @include breakpoint(1440) {
+    font-size: 3.2rem;
+  }
+  @include breakpoint(1280) {
+    font-size: 2.8rem;
+  }
+  @include breakpoint(452) {
+    font-size: 2.4rem;
+  }
+  @include breakpoint(320) {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: 4rem;
+  @include breakpoint(1440) {
+    font-size: 2.8rem;
+  }
+  @include breakpoint(1280) {
+    font-size: 2.4rem;
+  }
+  @include breakpoint(452) {
+    font-size: 2rem;
+  }
+  @include breakpoint(320) {
+    font-size: 1.6rem;
+  }
+}
+
+p {
+  font-size: 3.6rem;
+  @include breakpoint(1440) {
+    font-size: 2.4rem;
+  }
+
+  @include breakpoint(1280) {
+    font-size: 2rem;
+  }
+  @include breakpoint(452) {
+    font-size: 1.6rem;
+  }
+  @include breakpoint(320) {
+    font-size: 1.2rem;
+  }
+}
+
+a {
+  color: hsl(120, 51%, 54%);
+  text-decoration: none;
+  border: 2px solid transparent;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus,
+  &:target,
+  &:focus-visible {
+    border: 2px solid hsl(120, 51%, 54%);
+    outline: none;
+    text-decoration: none;
+  }
+}

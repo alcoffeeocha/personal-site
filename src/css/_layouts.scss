@@ -1,0 +1,40 @@
+@use "mixins" as *;
+
+main {
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 144rem;
+
+  @include breakpoint(1440) {
+    max-width: 102.4rem;
+  }
+
+  @include breakpoint(1280) {
+    max-width: 76.8rem;
+  }
+
+  @include breakpoint(768) {
+    padding: 0 4rem;
+  }
+
+  @include breakpoint(425) {
+    padding: 0 2rem;
+  }
+  @include breakpoint(320) {
+    padding: 0 1.4rem;
+  }
+}
+
+article {
+  padding: 8rem 0;
+
+  *:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  @include breakpoint(1280) {
+    *:not(:last-child) {
+      margin-bottom: 1.6rem;
+    }
+  }
+}

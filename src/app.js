@@ -1,16 +1,5 @@
-'use strict';
-import "./css/main.scss"
+"use strict";
 
 if (module.hot) {
-  module.hot.accept()
+  module.hot.accept();
 }
-
-const obj = {
-  a: 'a',
-  b: 'b',
-  c: {
-    cd: 'cd'
-  }
-}
-
-console.log(obj?.c?.cd,obj?.f?.fa)

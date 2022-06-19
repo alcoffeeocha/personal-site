@@ -1,0 +1,7 @@
+@use "functions" as *;
+
+@mixin breakpoint($pixels) {
+  @media (max-width: em($pixels)) {
+    @content;
+  }
+}
