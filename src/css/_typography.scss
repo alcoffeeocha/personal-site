@@ -38,23 +38,40 @@ h3 {
 
 p {
   font-size: 3.6rem;
+  word-wrap: break-word;
+  &::first-letter {
+    font-size: 4.2rem;
+  }
   @include breakpoint(1440) {
     font-size: 2.4rem;
+    &::first-letter {
+      font-size: 3rem;
+    }
   }
 
   @include breakpoint(1280) {
     font-size: 2rem;
+    &::first-letter {
+      font-size: 2.6rem;
+    }
   }
   @include breakpoint(452) {
     font-size: 1.6rem;
+    &::first-letter {
+      font-size: 2.2rem;
+    }
   }
   @include breakpoint(320) {
     font-size: 1.2rem;
+    &::first-letter {
+      font-size: 1.8rem;
+    }
   }
 }
 
 a {
-  color: hsl(120, 51%, 54%);
+  --link: #e0115f;
+  color: var(--link);
   text-decoration: none;
   border: 2px solid transparent;
 
@@ -65,7 +82,7 @@ a {
   &:focus,
   &:target,
   &:focus-visible {
-    border: 2px solid hsl(120, 51%, 54%);
+    border: 2px solid var(--link);
     outline: none;
     text-decoration: none;
   }

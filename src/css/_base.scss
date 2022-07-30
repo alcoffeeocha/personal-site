@@ -1,3 +1,5 @@
+@use "mixins" as *;
+
 html {
   font-size: 62.5%; // 1rem = 10px
   scroll-behavior: smooth;
@@ -6,12 +8,31 @@ html {
 }
 
 body {
-  background-color: #000000;
-  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+  background-color: #010127;
+  background-image: linear-gradient(
+    147deg,
+    #004e92 4%,
+    #000428 40%,
+    #2a0845 60%,
+    #37009c 96%
+  );
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 400% 400%;
   min-height: 100vh;
   color: #f5f5f7;
   font-weight: 400;
   font-size: 1.6rem;
+  @include animate("bgGradient 24s ease-in-out infinite");
+}
+
+@include keyframes(bgGradient) {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }
